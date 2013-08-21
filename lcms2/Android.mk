@@ -26,6 +26,9 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
 LOCAL_CFLAGS := -DAVOID_TABLES -O3 -fstrict-aliasing -fprefetch-loop-arrays \
 	-DANDROID_TILE_BASED_DECODE -DENABLE_ANDROID_NULL_CONVERT -D__Ansi__
 
+# Already builds with strict aliasing so let's just ignore any warnings.
+LOCAL_CFLAGS += -Wno-error=strict-aliasing -Wstrict-aliasing=3
+
 LOCAL_LDLIBS := -lz
 
 LOCAL_MODULE_TAGS := debug

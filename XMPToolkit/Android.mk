@@ -11,6 +11,9 @@ LOCAL_CFLAGS := -O3 -DNDEBUG -fstrict-aliasing -fexceptions -frtti \
 	-DUNIX_ENV -DHAVE_MEMMOVE -DkBigEndianHost=0 -DEnableDynamicMediaHandlers=0 \
 	-DEnableMiscHandlers=0 -DEnablePluginManager=0 -Wno-address
 
+# Already builds with strict aliasing so let's just ignore any warnings.
+LOCAL_CFLAGS += -Wno-error=strict-aliasing -Wstrict-aliasing=3
+
 LOCAL_SRC_FILES := \
 	XMPFiles/source/HandlerRegistry.cpp \
 	XMPFiles/source/WXMPFiles.cpp \
