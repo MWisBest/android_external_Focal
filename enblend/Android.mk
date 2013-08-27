@@ -40,6 +40,8 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
 LOCAL_CFLAGS := -DAVOID_TABLES -O3 -fexceptions -fstrict-aliasing -fprefetch-loop-arrays \
 	-D__Ansi__ -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64
 
+LOCAL_CPPFLAGS := -std=gnu++03
+
 LOCAL_LDLIBS := -lz
 LOCAL_MODULE_TAGS := debug
 
@@ -87,6 +89,8 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH) \
  
 LOCAL_CFLAGS := -DAVOID_TABLES -O3 -fexceptions -fstrict-aliasing -fprefetch-loop-arrays \
 	-D__Ansi__ -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64
+
+LOCAL_CPPFLAGS := -std=gnu++03
 
 LOCAL_MODULE_TAGS := debug
 
